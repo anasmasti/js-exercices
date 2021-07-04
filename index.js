@@ -7,12 +7,12 @@
   for (let i = 0; i < sortedLettersList.length; i++) {
     counter = 0;
     for (let j = 0; j < sortedLettersList.length; j++)
-      if (sortedLettersList[i] === sortedLettersList[j])
-         counter++;
-         sortedLettersList.splice(i, 0);
+      if (sortedLettersList[i] === sortedLettersList[j]) counter++;
 
     result.add(counter + sortedLettersList[i]);
   }
   let finalResult = Array.from(result);
-  console.log(finalResult);
+  finalResult.forEach((some_of_letters) => {
+    console.log(some_of_letters);
+  });
 })("aaaajjjabgggb");
