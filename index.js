@@ -19,11 +19,11 @@
 
 // Triangle
 ((rows) => {
-  for (let i = 1; i <= rows; i++) {
+  for (let i = 0; i < rows; i++) {
     for (let x = 0; x < rows - i; x++) {
       console.log(" ");
     }
-    for (let j = 1; j < i; j++) {
+    for (let j = 0; j < i; j++) {
       console.log("* ");
     }
     console.log(" ");
