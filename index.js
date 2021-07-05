@@ -16,3 +16,16 @@
     console.log(some_of_letters);
   });
 })("aaaajjjabgggb");
+
+// Triangle
+((rows) => {
+  for (let i = 1; i <= rows; i++) {
+    for (let x = 0; x < rows - i; x++) {
+      console.log(" ");
+    }
+    for (let j = 1; j < i; j++) {
+      console.log("* ");
+    }
+    console.log(" ");
+  }
+})(5);
