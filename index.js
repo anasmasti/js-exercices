@@ -17,6 +17,7 @@
   });
 })("aaaajjjabgggb");
 
+
 // Triangle
 ((rows) => {
   for (let i = 0; i < rows; i++) {
@@ -29,6 +30,7 @@
     console.log(" ");
   }
 })(5);
+
 
 // Close to zero
 ((ts) => {
@@ -50,4 +52,14 @@
     console.log(sortedList[0]);
   }
 
-})([0.5, 1, 56, 6, 4, 5, 88, 7, -5, -6, -2, -9, 41])
+})([0.5, 1, 56, 6, 4, 5, 88, 7, -5, -6, -2, -9, 41]);
+
+
+// Concatinate tables
+((listX, listY) => {
+
+  let result = listX.map((x, index) => { return x = [x, listY[index]] })
+
+  console.log(result);
+
+})([1, 6, 5, 2], [4, 5, 3, 0]);
