@@ -20,12 +20,34 @@
 // Triangle
 ((rows) => {
   for (let i = 0; i < rows; i++) {
-    for (let x = 0; x < rows - i; x++) 
+    for (let x = 0; x < rows - i; x++)
       console.log(" ");
-      
-    for (let j = 0; j < i; j++) 
+
+    for (let j = 0; j < i; j++)
       console.log("* ");
-    
+
     console.log(" ");
   }
 })(5);
+
+// Close to zero
+((ts) => {
+  let tsList = []
+  let sortedList = []
+
+  if (ts.length === 0 || !(ts.length >= 0 && ts.length <= 10000)) { console.log(0); }
+
+  if (ts.length !== 0) {
+    ts.map(number => {
+      if (number < 0)
+        number = number * -1
+      tsList.push(number)
+    })
+    sortedList = tsList.sort((a, b) => {
+      return a - b;
+    })
+
+    console.log(sortedList[0]);
+  }
+
+})([0.5, 1, 56, 6, 4, 5, 88, 7, -5, -6, -2, -9, 41])
