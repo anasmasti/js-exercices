@@ -63,3 +63,12 @@
   console.log(result);
 
 })([1, 6, 5, 2], [4, 5, 3, 0]);
+
+
+// Line break if the words finish
+((words) => {
+  let regex = /\s/g;
+  let result = words.replace(regex, '\n');
+  console.log(result);
+})('Hello im anas !')
+
