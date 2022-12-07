@@ -82,24 +82,34 @@ function calculateTotalPrice(prices, discount) {
 
 // Return money CodinGame
 function change(cash) {
-       if (cash === 1 || cash === 3) {
-        return null
-    }
+  if (cash <= 3) {
+      return null
+  }
 
-    const b10 = cash / 10;
-    const r10 = cash % 10;
+  let r10 = 0;
+  let r5 = 0;
+  let r2 = 0;
 
-    const b5 = r10 / 5;
-    const r5 = r10 % 5;
+  while (cash !== 0) {
+      if (cash % 2 === 0) {
+          if (cash >= 10) {
+              r10 = Math.floor(cash / 10)
+              cash = cash - (r10 * 10)
+          } else {
+              r2 = cash / 2
+              cash = cash - (r2 * 2)
+          }
+      } else {
+          cash = cash - 5;
+          r5++
+      }
+  }
 
-    const p2 = r5 / 2;
-    const r2 = r5 % 2;
-
-    return {
-        two: Math.floor(p2),
-        five: Math.floor(b5),
-        ten: Math.floor(b10)
-    };
+  return {
+      ten: r10,
+      five: r5,
+      two: r2
+  };
 }
 
 // Tast plce CodinGame
