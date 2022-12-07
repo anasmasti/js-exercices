@@ -68,3 +68,14 @@
   console.log(result);
 })('Hello im anas !')
 
+
+
+// CalculateTotalPrice
+function calculateTotalPrice(prices, discount) {
+    const maxProductPrice = prices.reduce((prev, curr) => prev > curr ? prev : curr, 0)
+    const totalOtherProductPrices = prices.reduce((prev, curr) => prev + curr, 0)
+    const [otherProductPrices] = prices.splice(prices.indexOf(maxProductPrice), 1)
+    const total = totalOtherProductPrices - (otherProductPrices * discount / 100)
+
+    return Math.floor(total)
+}
