@@ -54,13 +54,11 @@ function closeToZero(numbers) {
    return closeToZero
 };
 
-
 // Concatinate tables
 ((listX, listY) => {
   let result = listX.map((x, index) => { return x = [x, listY[index]] })
   console.log(result);
 })([1, 6, 5, 2], [4, 5, 3, 0]);
-
 
 // Line break if the words finish
 ((words) => {
@@ -68,7 +66,6 @@ function closeToZero(numbers) {
   let result = words.replace(regex, '\n');
   console.log(result);
 })('Hello im anas !')
-
 
 // Calculate Total Price CodinGame
 function calculateTotalPrice(prices, discount) {
@@ -80,7 +77,7 @@ function calculateTotalPrice(prices, discount) {
     return Math.floor(total)
 }
 
-// Return money CodinGame
+// Rendu de monnaie (CodinGame)
 function change(cash) {
   if (cash <= 3) {
       return null
@@ -112,7 +109,7 @@ function change(cash) {
   };
 }
 
-// Tast plce CodinGame
+// Classification de paquets robotisée (CodinGame)
 function solve(width, height, length, mass) {
   let tassPlace = ""
   const isEncombrant = (width * height * length >= 1000000) || width >= 150 || height >= 150 || length >= 150
@@ -131,7 +128,7 @@ function solve(width, height, length, mass) {
   return tassPlace;
 }
 
-// Approximation de π
+// Approximation de π (CodinGame)
 function approx(pts) {
   let pointsOutput = [];
 
