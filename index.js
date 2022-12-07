@@ -79,3 +79,25 @@ function calculateTotalPrice(prices, discount) {
 
     return Math.floor(total)
 }
+
+// Return money
+function change(cash) {
+       if (cash === 1 || cash === 3) {
+        return null
+    }
+
+    const b10 = cash / 10;
+    const r10 = cash % 10;
+
+    const b5 = r10 / 5;
+    const r5 = r10 % 5;
+
+    const p2 = r5 / 2;
+    const r2 = r5 % 2;
+
+    return {
+        two: Math.floor(p2),
+        five: Math.floor(b5),
+        ten: Math.floor(b10)
+    };
+}
