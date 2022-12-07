@@ -70,7 +70,7 @@
 
 
 
-// CalculateTotalPrice
+// Calculate Total Price CodinGame
 function calculateTotalPrice(prices, discount) {
     const maxProductPrice = prices.reduce((prev, curr) => prev > curr ? prev : curr, 0)
     const totalOtherProductPrices = prices.reduce((prev, curr) => prev + curr, 0)
@@ -80,7 +80,7 @@ function calculateTotalPrice(prices, discount) {
     return Math.floor(total)
 }
 
-// Return money
+// Return money CodinGame
 function change(cash) {
        if (cash === 1 || cash === 3) {
         return null
@@ -100,4 +100,23 @@ function change(cash) {
         five: Math.floor(b5),
         ten: Math.floor(b10)
     };
+}
+
+// Tast plce CodinGame
+function solve(width, height, length, mass) {
+  let tassPlace = ""
+  const isEncombrant = (width * height * length >= 1000000) || width >= 150 || height >= 150 || length >= 150
+  const isLourd = mass >= 20
+
+  if (isEncombrant || isLourd) {
+   tassPlace= "SPECIAL"
+  }
+  if (isEncombrant && isLourd) {
+    tassPlace= "REJECTED"
+  }
+  if (!isEncombrant && !isLourd) {
+    tassPlace= "STANDARD"
+  }
+  
+  return tassPlace;
 }
