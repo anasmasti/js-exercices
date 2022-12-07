@@ -130,3 +130,22 @@ function solve(width, height, length, mass) {
   
   return tassPlace;
 }
+
+// Approximation de π
+function approx(pts) {
+  let pointsOutput = [];
+
+  for (let i = 0; i < pts.length; i++) {
+    let point = pts[i];
+    let x = point[0];
+    let y = point[1];
+
+    if (Math.pow(x, 2) + Math.pow(y, 2) <= 1) {
+        pointsOutput.push(point);
+    }
+  }
+
+  let appoxPi = 4 * (pointsOutput.length / pts.length);
+
+  return appoxPi;
+}
