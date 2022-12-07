@@ -33,25 +33,26 @@
 
 
 // Close to zero
-((ts) => {
-  let tsList = []
-  let sortedList = []
+function closeToZero(numbers) {
+   if(!numbers || !numbers.length) {
+    return 0
+   }
 
-  if (ts.length === 0 || !(ts.length >= 0 && ts.length <= 10000)) { console.log(0); }
+   let closeToZero =0
+   for(let i =0; i<numbers.length; i++) {
+    if(closeToZero===0) {
+        closeToZero =numbers[i]
+    }
+    else if (numbers[i]>0 && numbers[i] <= Math.abs(closeToZero)) {
+        closeToZero = numbers[i]
+    }
+    else if (numbers[i]< 0 && -numbers[i] < Math.abs(closeToZero)) {
+        closeToZero = numbers[i]
+    }
+   }
 
-  if (ts.length !== 0) {
-    ts.map(number => {
-      if (number < 0)
-        number = number * -1
-      tsList.push(number)
-    })
-    sortedList = tsList.sort((a, b) => {
-      return a - b;
-    })
-
-    console.log(sortedList[0]);
-  }
-})([0.5, 1, 56, 6, 4, 5, 88, 7, -5, -6, -2, -9, 41]);
+   return closeToZero
+};
 
 
 // Concatinate tables
@@ -67,7 +68,6 @@
   let result = words.replace(regex, '\n');
   console.log(result);
 })('Hello im anas !')
-
 
 
 // Calculate Total Price CodinGame
