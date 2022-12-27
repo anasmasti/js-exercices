@@ -138,7 +138,7 @@ function approx(pts) {
     let y = point[1];
 
     if (Math.pow(x, 2) + Math.pow(y, 2) <= 1) {
-        pointsOutput.push(point);
+      pointsOutput.push(point);
     }
   }
 
