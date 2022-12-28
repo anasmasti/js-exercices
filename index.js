@@ -116,7 +116,7 @@ function solve(width, height, length, mass) {
   const isLourd = mass >= 20
 
   if (isEncombrant || isLourd) {
-   tassPlace= "SPECIAL"
+    tassPlace= "SPECIAL"
   }
   if (isEncombrant && isLourd) {
     tassPlace= "REJECTED"
