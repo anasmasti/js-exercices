@@ -31,7 +31,6 @@
   }
 })(5);
 
-
 // Close to zero
 function closeToZero(numbers) {
    if(!numbers || !numbers.length) {
