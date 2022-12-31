@@ -102,9 +102,9 @@ function change(cash) {
   }
 
   return {
-      ten: r10,
-      five: r5,
-      two: r2
+    ten: r10,
+    five: r5,
+    two: r2
   };
 }
 
