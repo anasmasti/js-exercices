@@ -87,14 +87,14 @@ function change(cash) {
   let r2 = 0;
 
   while (cash !== 0) {
-      if (cash % 2 === 0) {
-          if (cash >= 10) {
-              r10 = Math.floor(cash / 10)
-              cash = cash - (r10 * 10)
-          } else {
-              r2 = cash / 2
-              cash = cash - (r2 * 2)
-          }
+    if (cash % 2 === 0) {
+        if (cash >= 10) {
+          r10 = Math.floor(cash / 10)
+          cash = cash - (r10 * 10)
+        } else {
+            r2 = cash / 2
+            cash = cash - (r2 * 2)
+        }
       } else {
           cash = cash - 5;
           r5++
