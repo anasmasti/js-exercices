@@ -145,3 +145,42 @@ function approx(pts) {
 
   return appoxPi;
 }
+
+
+// findNetworkEndpoint
+function indexOf(element, arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === element) return i
+  }
+
+  return -1
+}
+
+function findNetworkEndpoint(startNodeId, fromIds, toIds) {
+  if (fromIds.length === 0) return startNodeId
+  if (fromIds.length === 1) return toIds[0]
+
+  let curNodeId = startNodeId
+  let curIndex = indexOf(curNodeId, fromIds)
+  let visitedNodeIds = Array(fromIds.length)
+    .fill()
+    .reduce((acc, cur, index) => {
+      acc[index] = false
+      return acc
+    }, {}) 
+  let lastIndexVisited = -1
+
+  while (curIndex !== -1) {
+    if (visitedNodeIds[curIndex]) {
+      return fromIds[lastIndexVisited]
+    }
+
+    visitedNodeIds[curIndex] = true
+    lastIndexVisited = curIndex
+    curNodeId = toIds[curIndex]
+    curIndex = indexOf(curNodeId, fromIds)
+  }
+
+  return curNodeId
+}
+
