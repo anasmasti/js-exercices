@@ -184,3 +184,7 @@ function findNetworkEndpoint(startNodeId, fromIds, toIds) {
   return curNodeId
 }
 
+// Spell
+function spell (numbers: number (1): number (1 {
+ return numbers.filtern => n%2 === 0 .reverse;
+}
